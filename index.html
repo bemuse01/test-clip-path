@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- lib -->
+        <script src="assets/js/lib/vue.min.js"></script>
+        
+
+        <!-- application -->
+
+        <!-- bg -->
+        <script src="assets/js/application/bg/bg.js"></script>
+        <!-- bg child -->
+        <script src="assets/js/application/bg/child/bg.child.param.js"></script>
+        <script src="assets/js/application/bg/child/bg.child.build.js"></script>
+        <!-- bg build -->
+        <script src="assets/js/application/bg/bg.build.js"></script> 
+    
+        
+        <!-- style -->
+        <link href="assets/css/main.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div id="wrap">
+            <div class="bg-container">
+                <!-- <img class="bg"></img> -->
+                <div class="bg"
+                    v-for="i in element.bg.child.get()"
+                    :key="i.key"
+                    :style="i.style"
+                ></div>
+            </div>
+        </div>
+        <script src="assets/js/main/main.js"></script>
+    </body>
+</html>
