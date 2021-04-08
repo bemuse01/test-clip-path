@@ -43,12 +43,12 @@ BG.child.build = class{
                 this.element[index] = {
                     key: index,
                     style: {
-                        width: `${w}%`,
-                        height: `${h}%`,
-                        top: `${top}%`,
-                        left: `${left}%`,
-                        backgroundColor: `rgb(255, 255, 255)`,
-                        // clipPath: `inset(${top}% ${right}% ${bottom}% ${left}%)`,
+                        // width: `${w}%`,
+                        // height: `${h}%`,
+                        // top: `${top}%`,
+                        // left: `${left}%`,
+                        // backgroundColor: `rgb(255, 255, 255)`,
+                        clipPath: `inset(${top}% ${right}% ${bottom}% ${left}%)`,
                         animationDelay: `${Math.random() * 0.8}s`
                     }
                 }
