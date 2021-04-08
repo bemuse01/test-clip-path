@@ -36,7 +36,9 @@ BG.child.build = class{
                 const l = Math.floor(Math.random() * 50 + 35)
 
                 const top = h * i - hgap * i
+                const bottom = (100 - h) - h * i
                 const left = w * j - wgap * j
+                const right = (100 - w) - w * j
 
                 this.element[index] = {
                     key: index,
@@ -45,7 +47,9 @@ BG.child.build = class{
                         height: `${h}%`,
                         top: `${top}%`,
                         left: `${left}%`,
-                        backgroundColor: `hsl(200, 100%, ${l}%)`
+                        backgroundColor: `rgb(255, 255, 255)`,
+                        // clipPath: `inset(${top}% ${right}% ${bottom}% ${left}%)`,
+                        animationDelay: `${Math.random() * 0.8}s`
                     }
                 }
             }
@@ -59,6 +63,11 @@ BG.child.build = class{
         this.height = height
 
         this.#create()
+    }
+
+    
+    // click
+    click(){
     }
 
 

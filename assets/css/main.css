@@ -1,3 +1,26 @@
+/* animation */
+@keyframes hide{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes show{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.blink-hide-animation{
+    animation: hide 0.08s linear 3 forwards;
+}
+
+
+/* init */
 *{
     margin: 0;
     padding: 0;
@@ -25,4 +48,22 @@ div.bg-container{
 }
 div.bg{
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 101vw;
+    height: 101vh;
+    background: url('../src/bg.jpg') no-repeat center center / cover;
+}
+div.bg-cover{
+    position: absolute;
+    animation: hide 0.08s linear 2 forwards;
+}
+img.bg-cover{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: show 0.08s linear 2 forwards;
 }
