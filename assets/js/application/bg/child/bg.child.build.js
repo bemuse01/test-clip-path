@@ -33,13 +33,10 @@ BG.child.build = class{
             for(let j = 0; j < col; j++){
                 const index = i * col + j
 
-                const r = Math.floor(Math.random() * 255)
-                const g = Math.floor(Math.random() * 255)
-                const b = Math.floor(Math.random() * 255)
                 const l = Math.floor(Math.random() * 50 + 35)
 
-                const top = h * i - wgap * i
-                const left = w * j - hgap * j
+                const top = h * i - hgap * i
+                const left = w * j - wgap * j
 
                 this.element[index] = {
                     key: index,
